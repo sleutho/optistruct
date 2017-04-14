@@ -1,0 +1,44 @@
+{
+	"name": "optistruct",
+	"displayName": "OptiStruct",
+	"description": "OptiStruct Bulk Data Format",
+	"version": "0.1.0",
+	"publisher": "sleutho",
+	"icon": "images/optistruct.png",
+	"engines": {
+		"vscode": "^0.10.1"
+	},
+	"repository": {
+		"type": "git",
+		"url": "https://github.com/sleutho/optistruct.git"
+	},
+	"categories": [
+		"Languages"
+	],
+	"contributes": {
+		"languages": [
+			{
+				"id": "fem",
+				"aliases": [
+					"OptiStruct",
+					"Altair",
+					"HyperWorks",
+					"Bulk",
+					"Bulk Data",
+					"Bulk Data Format"
+				],
+				"extensions": [
+					".fem"
+				],
+				"configuration": "./fem.configuration.json"
+			}
+		],
+		"grammars": [
+			{
+				"language": "fem",
+				"scopeName": "source.fem",
+				"path": "./syntaxes/fem.tmLanguage"
+			}
+		]
+	}
+}
