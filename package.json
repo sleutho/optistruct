@@ -18,19 +18,20 @@
 	"contributes": {
 		"languages": [
 			{
-				"id": "fem",
+				"id": "optistruct",
 				"aliases": [
 					"OptiStruct",
 					"Altair",
 					"HyperWorks",
 					"Bulk",
 					"Bulk Data",
-					"Bulk Data Format"
+					"Bulk Data Format",
+					"fem"
 				],
 				"extensions": [
 					".fem"
 				],
-				"configuration": "./fem.configuration.json"
+				"configuration": "./language-configuration.json"
 			}
 		],
 		"grammars": [
