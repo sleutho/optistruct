@@ -28,6 +28,10 @@
 			<key>include</key>
 			<string>#invalid</string>
 		</dict>
+		<dict>
+			<key>include</key>
+			<string>#io.options.section</string>
+		</dict>
 	</array>
 	<key>repository</key>
 	<dict>
@@ -51,6 +55,13 @@
 			<string>(?&lt;=.{80})(.*)</string>
 			<key>name</key>
 			<string>invalid.illegal.fem</string>
+		</dict>
+		<key>io.options.section</key>
+		<dict>
+			<key>match</key>
+			<string>^(PSOLID)(?=([\s|\W]))</string>
+			<key>name</key>
+			<string>entity.name.function.fem</string>
 		</dict>
 	</dict>
 	<key>scopeName</key>
