@@ -13,11 +13,46 @@
 	<key>keyEquivalent</key>
 	<string>^~T</string>
 	<key>name</key>
-	<string>OptiStruct Bulk Data Format</string>
+	<string>optistruct</string>
 	<key>patterns</key>
-	<array></array>
+	<array>
+		<dict>
+			<key>include</key>
+			<string>#comment1</string>
+		</dict>
+		<dict>
+			<key>include</key>
+			<string>#comment2</string>
+		</dict>
+		<dict>
+			<key>include</key>
+			<string>#invalid</string>
+		</dict>
+	</array>
 	<key>repository</key>
-	<dict></dict>
+	<dict>
+		<key>comment1</key>
+		<dict>
+			<key>match</key>
+			<string>(\$.*)</string>
+			<key>name</key>
+			<string>comment.line.character.fem</string>
+		</dict>
+		<key>comment2</key>
+		<dict>
+			<key>match</key>
+			<string>(^(//|#).*)</string>
+			<key>name</key>
+			<string>comment.line.character.fem</string>
+		</dict>
+		<key>invalid</key>
+		<dict>
+			<key>match</key>
+			<string>(?&lt;=.{80})(.*)</string>
+			<key>name</key>
+			<string>invalid.illegal.fem</string>
+		</dict>
+	</dict>
 	<key>scopeName</key>
 	<string>source.fem</string>
 	<key>uuid</key>
